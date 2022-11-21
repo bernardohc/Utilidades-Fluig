@@ -1,0 +1,23 @@
+function showCamera() {
+
+	var valorID = 0;
+	var solEstabelecimento = 0;
+	var solDocumento = 0;
+
+	$("input[id^='codigoID___']").each(function(index, value){
+		valorID =  $(this).val();
+	});
+
+	$("input[id^='solEstabelecimento___']").each(function(index, value){
+		solEstabelecimento = $(this).val();
+	});
+
+	$("input[id^='solDocumento___']").each(function(index, value){
+		solDocumento = $(this).val();
+	});
+	
+	JSInterface.showCamera(valorID+ "_" + solEstabelecimento + "_" + solDocumento ); 
+			// alterei o css para gerar uma confirmação visual após o click	
+	//$("#inputAnexo___" + indice).removeClass().addClass("btn btn-success");
+
+}
