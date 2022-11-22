@@ -1,20 +1,15 @@
-let index = 0;
-let contador = 1000;
+$('[name^="campoFilho___"'); //isso lhe trará todos os campos filhos deste formulário. Após isso, você por implementar um for, podendo ser um foreach.
 
-$('[name^="codigoID___"'); //trará todos os campos filhos deste formulário. 
+for(var i = 0; i < $('[name^="campoFilho___"').length; i++){
 
-			for(var i = 0; i < $('[name^="codigoID___"').length; i++){
+//Aqui percorrerá todos os itens.
 
-			//Aqui percorrerá todos os itens.
+//Busca o nome do campo pra facilitar a identificação
+var nomeCampo = $('[name^="campoFilho___"')[i].name;
 
-			//Busca o nome do campo pra facilitar a identificação
-			var nomeCampo = $('[name^="codigoID___"')[i].name;
+//Busca o separador do indice, após encontrar, como posiciona no início, pulamos 3 posições e buscamos o restante.
 
-			//Busca o separador do indice, após encontrar, como posiciona no início, pulamos 3 posições e buscamos o restante.
+var indice = nomeCampo.substr(nomeCampo.indexOf("___")+3);
 
-			var indiceFilho = nomeCampo.substr(nomeCampo.indexOf("___")+3);
-			
-			index = parseInt(contador) + parseInt(indiceFilho);
-
-			$(`#codigoID___${indice}`).val(index).prop("readonly", true);
-			}
+alert(indice);
+}
