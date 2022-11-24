@@ -1,0 +1,23 @@
+mascaraCpfCnpj : function(idCampo){
+			$('#'+idCampo).unmask();
+			if($('#'+idCampo).val().replace(/[^0-9]/g, "").trim().length <= 11){ // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
+				$('#'+idCampo).mask("000.000.000-009");
+			}else{
+				$('#'+idCampo).mask("00.000.000/0000-00");
+			}
+		},
+		
+		mascaraTelefone : function(idCampo){
+			$('#'+idCampo).unmask();
+			//11 dígitos de somente número ddd + numero
+			if($('#'+idCampo).val().replace(/[^0-9]/g, "").trim().length == 11){ // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
+				$('#'+idCampo).mask('(00) 00000-0009');
+			} else {
+				$('#'+idCampo).mask('(00) 0000-00009');
+			}
+		},
+		
+		mascaraCep : function(idCampo){
+			$('#'+idCampo).unmask();
+			$('#'+idCampo).mask('99999-999');
+		}
