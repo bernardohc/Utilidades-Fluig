@@ -1,0 +1,34 @@
+function showCamera(oElement) {
+	
+	const indice = validafunctions.getPosicaoFilho($(oElement).closest('tr').find("input")[0].id);
+	
+	let valorID = "";
+	let solEstabelecimento = "";
+	let solDocumento = "";
+	let nomeAnexo = "";
+
+	valorID = $('#codigoID___'+indice).val();
+	
+	solEstabelecimento = $('#solEstabelecimento___'+indice).val();
+
+	solDocumento = $('#solDocumento___'+indice).val();
+	
+	
+	if(valorID == ''){
+		FLUIGC.toast({ title: '', message: "É preciso preencher o código Id.", type: 'warning' });
+		return;
+	}else if(solEstabelecimento == ''){
+		FLUIGC.toast({ title: '', message: "É preciso preencher o Estabelecimento.", type: 'warning' });
+		return;
+	}else if(solDocumento == ''){
+		FLUIGC.toast({ title: '', message: "É preciso preencher o Documento.", type: 'warning' });
+		return;
+	}
+	
+	nomeAnexo = (valorID+ "_" + solEstabelecimento + "_" + solDocumento);
+
+	JSInterface.showCamera(nomeAnexo); 	
+	
+	$("#nomeAnexo___"+indice).val(nomeAnexo);
+	$("#nomeAnexo___"+indice).prev().prop('disabled', true);
+}
