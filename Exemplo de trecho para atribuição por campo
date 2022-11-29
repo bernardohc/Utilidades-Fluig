@@ -1,0 +1,17 @@
+$(document).on("change", "#setor", function() {
+				let setor = $("#setor").val();
+				
+				if(setor == 'Motorista'){
+					//Grupo Relatório de Viagens - Analisa Motorista
+					$('#grupoAnalisaRelatorio').val('Pool:Group:000003');
+				}else if(setor == 'Técnico'){
+					//Grupo Relatório de Viagens - Analisa Técnico
+					$('#grupoAnalisaRelatorio').val('Pool:Group:000004');
+				}else if(setor == 'Outro'){
+					//Grupo Relatório de Viagens - Analisa Outro
+					$('#grupoAnalisaRelatorio').val('Pool:Group:000005');
+				}else{
+					$('#grupoAnalisaRelatorio').val('');
+				}
+				
+			});
