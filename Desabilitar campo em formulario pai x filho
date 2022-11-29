@@ -1,0 +1,14 @@
+	var indexes = form.getChildrenIndexes("solTbDespesas");
+	
+	for (var i = 0; i < indexes.length; i++) {		
+		
+		if (form.getFormMode() == "VIEW"){
+			customHTML.append("<script>$('#nomeAnexo___"+  indexes[i] +"').closest('.form-input').css('display', 'none');</script>");
+		}
+		
+		if (form.getValue('nomeAnexo___'+indexes[i]) != "" ){
+			
+			customHTML.append("<script>$('#nomeAnexo___"+  indexes[i] +"').prev().prop('disabled', true);</script>");
+			
+		}
+	}
