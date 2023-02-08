@@ -1,2 +1,2 @@
 # Utilidades-Fluig
-Utilidadespara desenvolvimento Fluig
+Utilidades para desenvolvimento Fluig
