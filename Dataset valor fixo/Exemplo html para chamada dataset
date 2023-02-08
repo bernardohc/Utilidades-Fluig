@@ -1,0 +1,5 @@
+<div class="form-group col-md-2">
+  <label for="moeda">Moeda</label>
+  <select name="moeda" id="moeda" class="form-control" dataset="dsMoedas" datasetkey="moeda" datasetvalue="simbolo">
+  </select>
+</div>
