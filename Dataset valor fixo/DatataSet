@@ -1,0 +1,23 @@
+function defineStructure() {
+
+}
+function onSync(lastSyncDate) {
+
+}
+function createDataset(fields, constraints, sortFields) {
+    //Função cria o datatset
+    var ds = DatasetBuilder.newDataset();
+    //Cria as colunas
+    ds.addColumn("simbolo");
+    ds.addColumn("nomeMode");
+
+    //Cria as linhas com array
+    ds.addRow(new Array("R$", "Real"));
+    ds.addRow(new Array("U$$", "Dolar"));
+
+    return ds;
+
+
+}function onMobileSync(user) {
+
+}
